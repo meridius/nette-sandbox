@@ -12,7 +12,9 @@ php:
 application:
 	errorPresenter: Error
 	mapping:
-		*: App\*Module\Presenters\*Presenter
+		Admin: App\Module\Admin\Presenter\*Presenter
+		Common: App\Module\Common\Presenter\*Presenter
+		*: App\Presenters\*Presenter
 
 
 session:
