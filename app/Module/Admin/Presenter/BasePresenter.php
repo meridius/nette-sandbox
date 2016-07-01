@@ -7,10 +7,9 @@ use Nette\Application\UI\Presenter;
 class BasePresenter extends Presenter {
 
 	public function formatLayoutTemplateFiles() {
-		Debugger::fireLog('why is it not called?!');
-		return [
-
-		];
+		$files = parent::formatLayoutTemplateFiles();
+		$files[] = APP_DIR . "/presenters/templates/@layout.latte";
+		return $files;
 	}
 
 }
